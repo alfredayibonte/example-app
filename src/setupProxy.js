@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 module.exports = function (app) {
   app.use(
-    "/api",
+    "/word",
     createProxyMiddleware({
-      target: "http://random-words-api.vercel.app/",
+      target: "https://random-words-api.vercel.app/",
       changeOrigin: true,
     })
   );
